@@ -2,7 +2,7 @@
 
 ## Description
 
-The Boston House Price Predictor is a Python application deployed on Heroku for predicting house prices in Boston. This application can be accessesd via
+The Boston House Price Predictor is a Python application deployed on Heroku for predicting house prices in Boston. This application can be accessesd [here](https://boston-house-price-predict.herokuapp.com).
 
 ## Tools/Libraries required
 
@@ -14,11 +14,12 @@ The Boston House Price Predictor is a Python application deployed on Heroku for 
 
 ## Usage
 
-Post request should be made to the endpoint using a list of 13 features.
+To predict house prices, send a post request [here](https://boston-house-price-predict.herokuapp.com/predict). The Predict endpoint takes only POST requests using a list of 13 features.
 
 ```python
 
 import json
+import requests
 
 url = "https://boston-house-price-predict.herokuapp.com/predict"
 data = {"inputs": [[11.8123, 0.0, 18.1, 0.0, 0.718, 6.824,76.5, 1.794, 24.0, 666.0, 20.2, 48.45, 22.74],
@@ -29,6 +30,8 @@ response = requests.post(url, data=post_data)
 print(response.status_code, response.content)
 
 ```
+
+![alt text](Results.PNG "Results")
 
 ## Contribution
 
